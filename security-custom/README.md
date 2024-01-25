@@ -1,5 +1,5 @@
 # spring-security-custom
-_managing customized authentication mechanism for different REST apis_
+#### _<ins>managing customized authentication mechanism for different REST apis</ins>_
 
  1. By default spring security authenticates all requests. Refer _`defaultSecurityFilterChain`_ method in _`SpringBootWebSecurityConfiguration`_ class which is generating an object of _`SecurityFilterChain`_ with default configurations.
  2. Override the _`defaultSecurityFilterChain`_ method to generate a bean of _`SecurityFilterChain`_ having custom configurations. Refer _`ApiSecurityConfig.java`_ in `_configuration_` package.
