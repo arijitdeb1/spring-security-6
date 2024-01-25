@@ -1,5 +1,5 @@
 # spring-security-custom
-#### _<ins>configure multiple users for authentication</ins>_
+#### _<ins>configure multiple in-memory users for authentication</ins>_
 
  1. Include below dependencies to pom.xml
  
