@@ -1,7 +1,7 @@
 # spring-security-6
 #### _**<ins>managing user credentials in a database(H2)</ins>**_
 
-<ins>Configure embedded H2 database</ins>:
+<ins>**Configure embedded H2 database**</ins>:
    1. Add below dependencies
      
      <dependency>
@@ -29,7 +29,9 @@
           
    4. Open localhost:8080/h2-console in browser and provide url/username/password from above.
    
-   <ins>Configure tables required for spring security demo</ins>
+   
+   
+   <ins>**Configure tables required for spring security demo**</ins>
    
    1. Copy the DDL queries from _`org\springframework\security\spring-security-core\6.2.1\spring-security-core-6.2.1-sources.jar!\org\springframework\security\core\userdetails\jdbc\users.ddl`_  OR below DDL queries
    
@@ -37,7 +39,11 @@
     create table authorities (username varchar_ignorecase(50) not null,authority varchar_ignorecase(50) not null,constraint fk_authorities_users foreign key(username) references users(username));
     create unique index ix_auth_username on authorities (username,authority);
     
-   <ins>Configure user credentials required for spring security demo</ins>
+   2. Insert some and user details and corresponding authorities.
+    
+    
+    
+   <ins>**Configure user credentials required for spring security demo**</ins>
    
    1. Add below dependencies to pom.xml
    
