@@ -58,5 +58,17 @@
             }  
           
      
- 5. If _`CORS`_ enabled, the client will make _`preflight`_ request first to validate CORS and before making the original request.   
+ 5. If _`CORS`_ enabled, the client will make _`preflight`_ request first to validate CORS and before making the original request.  
+ 
+ 
+ #### _<ins>Testing CORS integration with a REST client</ins>_ 
+ 
+  1. Pull the _`RestClient`_ application present in the same Git repository.
+  2. Change the username/password in portal.js
+  
+        
+        "Authorization": "Basic " + btoa("<USRNAME>" + ":" + "<PASSWORD>")
+        
+  3. Start the RestClient application at localhost:8090 and click the button.
+  4. Comment/Uncomment the CORS integration in the _`SecurityFilterChain`_ configuration in _`ApiSecuritConfig`_ of _`security-CORS`_ application to test CORS in action .
         
