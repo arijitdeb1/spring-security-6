@@ -34,4 +34,9 @@ public class LoginController {
         }
         return response;
     }
+
+    @PostMapping("/testCSRF")
+    public ResponseEntity<String> testCSRF(){
+        return ResponseEntity.ok("Hello!!!!");
+    }
 }

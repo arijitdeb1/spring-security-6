@@ -1,0 +1,7 @@
+1. CSRF(Cross Site Request Forgery) is a security attack/vulnerability to steal data from web application by execution some privileged action.
+
+2. Spring Security provide CSRF protection by blocking POST/PUT request to web application.
+comment out http.csrf().disable() in SecurityFilterChain bean and try to register a user using the POST api in LoginController. Will get 401 unauthorized.
+
+3. Recommended to handle CSRF in a proper manner without disabling it.    
+

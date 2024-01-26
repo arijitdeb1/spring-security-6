@@ -18,13 +18,13 @@ import static org.springframework.security.config.Customizer.withDefaults;
 public class ApiSecurityConfig {
 
     @Bean
-    public SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
-        http.csrf().disable();
+        public SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
+        http.csrf().ignoringRequestMatchers("/register","/h2-console/**");
         http.headers().frameOptions().disable();
         return http.authorizeHttpRequests((requests) -> requests
                 .requestMatchers("/h2-console/**").permitAll()
                 .requestMatchers("/car", "/bird").authenticated()
-                .requestMatchers("/animal", "/plant","/register").permitAll()
+                .requestMatchers("/animal", "/plant","/testCSRF","/register").permitAll()
                 .requestMatchers("/insect").denyAll())
                 .formLogin(withDefaults())
                 .httpBasic(withDefaults())
