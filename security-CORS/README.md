@@ -28,7 +28,7 @@
  
  
  
- -  Instead of mentioning *`@CrossOrigi`*n annotation on all the controller inside our web app, we can define CORS related configurations globally using Spring Security as below -
+ -  Instead of mentioning *`@CrossOrigin`* annotation on all the controller inside our web app, we can define CORS related configurations globally using Spring Security as below -
  
         @Bean
             public SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
@@ -58,5 +58,5 @@
             }  
           
      
-     
+ 5. If _`CORS`_ enabled, the client will make _`preflight`_ request first to validate CORS and before making the original request.   
         
