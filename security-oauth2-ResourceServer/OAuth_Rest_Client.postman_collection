@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "7c88b871-d2f2-43ca-b21a-296b3ed5b9e0",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6548548"
+	},
+	"item": [
+		{
+			"name": "OAuth-Rest-Client",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "scope",
+							"value": "openid",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "GXGahOo1GrK1FlkBdyon9KeYhCSDPEK0",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "clientapi",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8180/realms/dev/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/plant",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"plant"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
