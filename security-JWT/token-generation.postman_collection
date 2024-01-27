@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "a5af646b-47de-4f79-a273-dfd81bf1db46",
+		"name": "Spring-Security-6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6548548"
+	},
+	"item": [
+		{
+			"name": "registerUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"john\",\r\n    \"pwd\":\"john\",\r\n    \"role\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testCSRF",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/testCSRF",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"testCSRF"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "car",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Enzo",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Enzo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/car",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"car"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "client",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "custom_login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Enzo",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Enzo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/custom_login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"custom_login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "plant",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBcmlqaXQiLCJzdWIiOiJKV1QgVG9rZW4iLCJ1c2VybmFtZSI6IkVuem8iLCJhdXRob3JpdGllcyI6InVzZXIiLCJpYXQiOjE3MDYzNDEyMjIsImV4cCI6MTcwNjM3MTIyMn0.xWkE1g6nL2BC5UnAYyZb2HhLQUdzjAmufH3F-Yj_qhQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/plant",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"plant"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
