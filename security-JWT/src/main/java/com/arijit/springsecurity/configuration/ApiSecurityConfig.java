@@ -24,12 +24,10 @@ public class ApiSecurityConfig {
 
     @Bean
     public SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
-        http.csrf().disable();
-        http.headers().frameOptions().disable();
-        return http
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS) //instruction to spring security to not create any session
-                .and()
-                .cors().configurationSource(new CorsConfigurationSource() {
+        http.csrf(csrfCustomizer -> csrfCustomizer.disable());
+        http.headers(headersCustomizer -> headersCustomizer.frameOptions(frameOptionsCustomizer->frameOptionsCustomizer.disable()));
+        return http.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) //instruction to spring security to not create any session
+                .cors( corsCustomizer ->  corsCustomizer.configurationSource(new CorsConfigurationSource() {
             @Override
             public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
                 CorsConfiguration configuration = new CorsConfiguration();
@@ -40,8 +38,7 @@ public class ApiSecurityConfig {
                 configuration.setExposedHeaders(Arrays.asList("Authorization")); //header to send JWT token to UI
                 configuration.setMaxAge(3600L);//browser will remember this configuration for 1 hour
                 return configuration;
-                }
-                }).and()
+                }}))
                 .addFilterAfter(new JWTTokenGenerationFilter(), BasicAuthenticationFilter.class)//jwt token generation will start after BasicAuthenticationFilter
                 .addFilterBefore(new JWTTokenValidatorFilter(), BasicAuthenticationFilter.class)//jwt token validation will start before BasicAuthenticationFil
                 .authorizeHttpRequests((requests) -> requests
