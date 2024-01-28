@@ -42,7 +42,7 @@ _This service will act as `Resource Server` i.e. will require using valid Access
    OR
   ##### <ins>POSTMAN setup to get Authorization code for a User registered with Keycloak</ins>
  
-  1. Execute following URI from browser. Configure client id/secret/redirect URI as required.
+  1. Execute following URI from **browser**. Configure client id/secret/redirect URI as required.
       http://localhost:8180/realms/dev/protocol/openid-connect/auth?client_id=clientuser&response_type=code&scope=openid&redirect_uri=http://localhost:7080/sample 
     
   2. Provide username/password on screen.
