@@ -19,9 +19,9 @@ public class ApiSecurityConfig {
 
     @Bean
     public SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
-        http.csrf().disable();
-        http.headers().frameOptions().disable();
-        return http.cors().configurationSource(new CorsConfigurationSource() {
+        http.csrf(csrfCustomizer -> csrfCustomizer.disable());
+        http.headers(headersCustomizer -> headersCustomizer.frameOptions(frameOptionsCustomizer->frameOptionsCustomizer.disable()));
+        return http.cors( corsCustomizer ->  corsCustomizer.configurationSource(new CorsConfigurationSource() {
             @Override
             public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
                 CorsConfiguration configuration = new CorsConfiguration();
@@ -31,8 +31,7 @@ public class ApiSecurityConfig {
                 configuration.setAllowedHeaders(Collections.singletonList("*"));//allow all headers from another origin
                 configuration.setMaxAge(3600L);//browser will remember this configuration for 1 hour
                 return configuration;
-                }
-                }).and()
+                }}))
                 .authorizeHttpRequests((requests) -> requests
                 .requestMatchers("/bird").hasAuthority("admin")
                 .requestMatchers("/animal").hasAnyAuthority("admin","user")
