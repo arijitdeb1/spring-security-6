@@ -15,8 +15,8 @@ public class ApiSecurityConfig {
 
     @Bean
     public SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
-        http.csrf().disable();
-        http.headers().frameOptions().disable();
+        http.csrf(csrfCustomizer -> csrfCustomizer.disable());
+        http.headers(headersCustomizer -> headersCustomizer.frameOptions(frameOptionsCustomizer->frameOptionsCustomizer.disable()));
         return http.authorizeHttpRequests((requests) -> requests
                 .requestMatchers("/bird").hasAuthority("admin")
                 .requestMatchers("/animal").hasAnyAuthority("admin","user")
