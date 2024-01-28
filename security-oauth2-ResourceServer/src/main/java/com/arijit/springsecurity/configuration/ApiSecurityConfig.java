@@ -10,11 +10,9 @@ import org.springframework.security.oauth2.server.resource.authentication.JwtAut
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
-
 import java.util.Arrays;
 import java.util.Collections;
 
-import static org.springframework.security.config.Customizer.withDefaults;
 
 @Configuration
 public class ApiSecurityConfig {
@@ -25,12 +23,10 @@ public class ApiSecurityConfig {
         JwtAuthenticationConverter jwtAuthenticationConverter = new JwtAuthenticationConverter();
         jwtAuthenticationConverter.setJwtGrantedAuthoritiesConverter(new KeycloakRoleConverter());
 
-        http.csrf().disable();
-        http.headers().frameOptions().disable();
-        return http
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS) //instruction to spring security to not create any session
-                .and()
-                .cors().configurationSource(new CorsConfigurationSource() {
+        http.csrf(csrfCustomizer -> csrfCustomizer.disable());
+        http.headers(headersCustomizer -> headersCustomizer.frameOptions(frameOptionsCustomizer->frameOptionsCustomizer.disable()));
+        return http.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) //instruction to spring security to not create any session
+                .cors( corsCustomizer ->  corsCustomizer.configurationSource(new CorsConfigurationSource() {
             @Override
             public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
                 CorsConfiguration configuration = new CorsConfiguration();
@@ -42,9 +38,8 @@ public class ApiSecurityConfig {
                 configuration.setMaxAge(3600L);//browser will remember this configuration for 1 hour
                 return configuration;
                 }
-                })
-                .and().oauth2ResourceServer().jwt().jwtAuthenticationConverter(jwtAuthenticationConverter)
-                .and().and()
+                }))
+                .oauth2ResourceServer(oauth2ResourceServerCustomizer -> oauth2ResourceServerCustomizer.jwt(jwtCustomizer -> jwtCustomizer.jwtAuthenticationConverter(jwtAuthenticationConverter)))
                 .authorizeHttpRequests((requests) -> requests
                 .requestMatchers("/bird").hasRole("ADMIN")
                 .requestMatchers("/animal").hasAnyRole("ADMIN","USER")
