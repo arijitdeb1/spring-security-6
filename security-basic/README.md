@@ -1,5 +1,5 @@
 # spring-security-basic
- 1. Add below dependency to pom.xml - TEST
+ 1. Add below dependency to pom.xml
     
     
     <dependency>
