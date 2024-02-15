@@ -13,6 +13,8 @@ A detailed step-by-step hands-on approach to learn and understand various concep
 
 ## Architecture
 
+![alt text] (https://github.com/arijitdeb1/spring-security-6/tree/main/images/main-arch.PNG)
+
 1. In Java based web applications Servlet Container(Web Sever - Apache Tomcat) takes care of translating the HTTP request to a ServletRequest before handing over to Servlet method(doGet,doPost) and also translating the ServletResponse to HTTP resposnse while responding back to client.
 
 2. The request, before reaching the Servlet pass through a series of Filters to perform certain pre work or security checks based on the configurations in the web application.
