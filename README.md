@@ -40,6 +40,8 @@ _* in-depth details of implementation are present in the ReadMe section of indiv
 
 1. **`security-basic`** is a project that demonstrates a basic Spring Security implementation using default and custom user credentials. For more details refer README.md within project.
 
-2. **`security-configure-user`** is a project that demonstrates a Spring Security implementation with custom access specifications/restrictions for multiple REST endpoints in the application. Also showcases how to register multiple user credentials in application memory(not recommended for production usecase). For more details refer README.md within project.
+2. **`security-custom`** is a project that demonstrates a Spring Security implementation with custom access specifications/restrictions for multiple REST endpoints in the application. For more details refer README.md within project.
 
-3. **`security-configure-DBuser`** is a project that provide api to register User and persist credentials within a H2 database. User retrieval and authentcation has been demonstrated using both default as custom approach.For more details refer README.md within project.
+3. **`security-configure-user`** showcases how to register multiple user credentials in application memory(not recommended for production usecase) and using same for authentication. For more details refer README.md within project.
+
+4. **`security-configure-DBuser`** is a project that provide api to register User and persist credentials within a H2 database. User retrieval has been demonstrated using both default as well as custom approaches.For more details refer README.md within project.
