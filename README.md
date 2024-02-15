@@ -38,4 +38,4 @@ Below section details out all the projects that were implemented as part of this
 
 _* in-depth details of implementation are present in the ReadMe section of individual projects_
 
-1. **security-basic** is a project that demonstrates a basic Spring Security implementation using default and custom user credentials. For more details refer README.md within project. 
+1. **`security-basic`** is a project that demonstrates a basic Spring Security implementation using default and custom user credentials. For more details refer README.md within project. 
