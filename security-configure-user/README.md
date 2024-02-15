@@ -1,6 +1,6 @@
 # spring-security-custom
 #### _<ins>configure multiple in-memory users for authentication</ins>_
-whenever we want to define custom security requirement and secure application endpoints, we have to define a bean of `SecurityFilterChain` specifying the access restrictions for application endpoints. These configurations will be loaded in `SpringContext` during application startup and will be referred while invoking the corresponding endpoint 
+whenever we want to define custom security requirement and secure application endpoints, we have to define a bean of `SecurityFilterChain` specifying the access restrictions for application endpoints. These configurations will be loaded into `SpringContext` during application startup and will be referred while invoking the corresponding endpoint 
  1. Include below dependencies to pom.xml
  
         <dependency>
@@ -15,6 +15,7 @@ whenever we want to define custom security requirement and secure application en
  2. Use _`InMemoryUserDetailsManager`_ and _`UserDetails`_ class to register users with role/permissions [not recommended for production]. Refer _`ApiSecurityConfig`_ class for implementation.
  3. Remove any username/password configuration from _`application.properties`_
  4. Refer bean configuration in _`ApiSecurityConfig`_ class for apis that require authentication.
+ 
     **/car** , **/bird** will require authentication.
     
     **/animal**, **/plant** will not require authentication
