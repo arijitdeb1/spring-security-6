@@ -21,7 +21,7 @@
  7. **Setting custom credentials**  
     copy below two in _**application.properties**_ -
    
-    
+       
     spring.security.user.name = admin
     spring.security.user.password = admin
     
