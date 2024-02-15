@@ -1,5 +1,5 @@
-# spring-security-6
-#### _**<ins>Encoding user defined password with Hashing algorithms provided by Spring security frameworks</ins>**_
+# spring-security-password-encoding
+Encoding user defined password with Hashing algorithms provided by Spring security frameworks
 
 #### _**<ins>Registering user with hashed password</ins>**_
  1. Define a bean in _`ApiSecurityConfig`_ that returns a _`BCryptPasswordEncoder`_ object.
