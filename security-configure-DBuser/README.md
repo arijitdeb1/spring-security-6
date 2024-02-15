@@ -1,6 +1,14 @@
-# spring-security-6
+# spring-security-using-database
 #### _**<ins>managing user credentials in a database(H2)</ins>**_
+Important classes and interfaces for User Management in Spring Security
 
+![ScreenShot](/images/user-details-arch.PNG?raw=true)
+
+# Overview
+Two separate implementations of loading User from H2 database has been done in this project - 
+ 1. Using default implementation of _`JdbcUserDetailsManager`_ defined in  _`ApiSecurityConfig`_. In this approach we need to create tables as mentioned in apis within _`JdbcUserDetailsManager`_.
+ 2. Using custom service that implements _`UserDetailsService`_ and can use custom tables to store User Details.
+ 
 ##### <ins>**_Configure embedded H2 database_**</ins>:
    1. Add below dependencies
      
@@ -31,9 +39,10 @@
    4. Open localhost:8080/h2-console in browser and provide url/username/password from above.
    5. Spring security framework will block H2 console. To enable permit request from _`/h2-console`_ and disable headers like _`csrf`_ and _`frameOption`_ during bean generation in _`ApiSecurityConfig`_ class.
    
+  
+  
    
-   
-##### <ins>**Configure tables(_as defined by spring security framework_) required for spring security demo**</ins>
+##### <ins>**Configure tables(_as defined by spring security framework in JdbcUserDetailsManager_) **</ins>
    
    1. Copy the DDL queries from _`org\springframework\security\spring-security-core\6.2.1\spring-security-core-6.2.1-sources.jar!\org\springframework\security\core\userdetails\jdbc\users.ddl`_  OR below DDL queries
    
@@ -42,12 +51,8 @@
     create unique index ix_auth_username on authorities (username,authority);
     
    2. Insert some and user details and corresponding authorities.
-    
-    
-    
-##### <ins>**_Configure user credentials required for spring security demo_**</ins>
-   
-   1. Add below dependencies to pom.xml
+      
+   3. Add below dependencies to pom.xml
    
      <dependency>
          <groupId>org.springframework.boot</groupId>
@@ -64,13 +69,13 @@
     
    Add required '_`connector`_' dependency if any other database other than H2 is used. 
    
-   2. Create bean of _`JdbcUserDetailsManager`_ which holds required datasource and user table details. Refer _`ApiSecurityConfig`_ class.
-   3. Define _`PasswordEncoder`_ bean in _`ApiSecurityConfig`_ which will be used by spring security framework in the background to encode/decode passwords. _`NoOpPasswordEncoder`_ will not perform any encoding for password and will retain plain text.
-   4. Include a debug point to _`loadUsersByUsername`_ method of _`JdbcUserDetailsManager`_ to evaluate if application is able to fetch details from database.
-   5. Comment out _`@Service`_ annotation on _`EmployeeDetailsService`_ class in _`service`_ package as it's conflicting with _`UserDetailsService`_ implementation here.
-   6. Start application and provide credentials defined in database.
+   4. Create bean of _`JdbcUserDetailsManager`_ which holds required datasource and user table details. Refer _`ApiSecurityConfig`_ class.
+   5. Define _`PasswordEncoder`_ bean in _`ApiSecurityConfig`_ which will be used by spring security framework in the background to encode/decode passwords. _`NoOpPasswordEncoder`_ will not perform any encoding for password and will retain plain text.
+   6. Include a debug point to _`loadUsersByUsername`_ method of _`JdbcUserDetailsManager`_ to evaluate if application is able to fetch details from database.
+   7. Comment out _`@Service`_ annotation on _`EmployeeDetailsService`_ class in _`service`_ package as it's conflicting with _`UserDetailsService`_ implementation here.
+   8. Start application and provide credentials defined in database.
    
-##### <ins>**Configure tables(_as defined by application developer_) required for spring security demo**</ins>
+##### <ins>**Configure tables(_custom or as defined by application developer_) required for spring security demo**</ins>
    1. Create a new table as below and insert user details.
    
           create table employee(id int not null primary key, email varchar_ignorecase(500) not null,pwd varchar_ignorecase(200) not null, role varchar_ignorecase(200)  not null);
