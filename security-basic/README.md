@@ -32,3 +32,6 @@
  9. Access the application using the credentials defined above.
  
     
+# Internal Flow Sequence Diagram
+
+![ScreenShot](/images/security-basic-arch.PNG?raw=true)
