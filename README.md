@@ -53,3 +53,5 @@ _* in-depth details of implementation are present in the ReadMe section of indiv
 7. **`security-CORS`** demonstrates a CORS use case using Spring Security and custom REST Client. For more details refer [README.md](https://github.com/arijitdeb1/spring-security-6/blob/main/security-CORS/README.md) within project.
 
 8. **`security-CSRF`** demonstrates a CSRF use case using Spring Security. For more details refer [README.md](https://github.com/arijitdeb1/spring-security-6/blob/main/security-CSRF/README.md) within project.
+
+9. **`security-JWT`** demonstrates a Spring Security authentication flow using JWT Tokens. For more details refer [README.md](https://github.com/arijitdeb1/spring-security-6/blob/main/security-JWT/README.md) within project.
