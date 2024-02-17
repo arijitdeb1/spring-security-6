@@ -1,14 +1,14 @@
 # Token based AuthN with Spring Security 
 
-#### Disadvantages of session(JSESSIONID) based approach 
+## Disadvantages of session(JSESSIONID) based approach 
  * JSESSIONID doesn't contain any user data
  * JSESSIONID is stored as a cookie in user browser which can be misused.
  
-#### Sequence Flow for Token based authentication
+## Sequence Flow for Token based authentication
 
   ![ScreenShot](/images/jwt-arch.PNG?raw=true)
   
-#### Advantages of Token(JWT) based approach 
+## Advantages of Token(JWT) based approach 
  * User credentials is shared only once during first attempt, all subsequent communications are validated using Token.
  * Tokens can be invalidated during any suspicious activities without invalidating the user credentials.
  * Tokens can be set with short life span.
@@ -16,14 +16,14 @@
  * Multiple applications within same organization can be easily accessed with same Token without multiple Login attempt.
  * Token is Stateless to avoid any sticky session.
  
-#### Anatomy of JWT(JSON Web Token) 
+## Anatomy of JWT(JSON Web Token) 
   A JWT token(right in below image) consist of 3 parts - Header, Payload(User Details), Signature
   
    ![ScreenShot](/images/jwt-anatomy.PNG?raw=true)
 
 
 
-#### Required changes to integrate Token generation/validation with spring security
+## Required changes to integrate Token generation/validation with spring security
 
  1. Add below dependency to pom.xml
  
@@ -57,7 +57,7 @@
  7. Create a 256 bit key in the _`SecurityConstants`_ class to be used as a signature for JWT Token from [here](https://acte.ltd/utils/randomkeygen).
  
  
- #### Debugging end to end Flow to generate/validate JWT Tokens
+## Debugging end to end Flow to generate/validate JWT Tokens
  
  1. Import the collection - _`token-generation.postman_collection`_ to POSTMAN.
  2. In POSTMAN, Open request custom_login >> Authorization >> Type = basic Auth >> Set appropriate username/password as configured in database.
