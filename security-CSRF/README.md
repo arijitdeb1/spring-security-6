@@ -1,5 +1,4 @@
-# spring-security-6
-#### _<ins>Basic understanding of CSRF[Cross Site Request Forgery], related issues and mitigation strategies</ins>_
+# Basic understanding of CSRF[Cross Site Request Forgery], related issues and mitigation strategies 
 
 1. _`CSRF(Cross Site Request Forgery)`_ is a security attack/vulnerability to steal data from web application by execution some privileged action.
 
