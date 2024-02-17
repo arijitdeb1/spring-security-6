@@ -24,24 +24,14 @@ It is the responsibility of the _`ProviderManager`_ which is an implementation o
  
  # Authority Vs Role
  
-    | Authority | Role     |
+ | Authority | Role     |
+ | --- | --- | 
+ | Authority is like an individual privilege or an action | Role is a group of priilege or action |
+ | Restricting access in fine-grained manner | Restricting access in coarse-grained manner |
+ | Ex: VIEWANIMAL, VIEWCAR etc. | Ex: ROLE_ADMIN, ROLE_USER (ROLE_prefix only to be used while configuring role in DBs. But when we refer to the rule we can do it by it's name/prefix) |
+ | hasAuthorit(), hasAnyAuthority(), access() | hasRole(), hasAnyRole(), access() |
     
-    | --- | --- | 
-    
-    | Authority is like an individual privilege or an action | Role is a group of priilege or action |
-    
-    | Restricting access in fine-grained manner | Restricting access in coarse-grained manner |
-    
-    | Ex: VIEWANIMAL, VIEWCAR etc. | Ex: ROLE_ADMIN, ROLE_USER (ROLE_prefix only to be used while configuring role in DBs. But when we refer to the rule we can do it by it's name/prefix) |
-    
-    | hasAuthorit(), hasAnyAuthority(), access() | hasRole(), hasAnyRole(), access() |
-    
-    
- |   |   |   |   |   |
- |---|---|---|---|---|
- |   |   |   |   |   |
- |   |   |   |   |   |
- |   |   |   |   |   |
+
     
     
     
