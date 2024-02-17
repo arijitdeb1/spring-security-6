@@ -40,16 +40,16 @@ _* in-depth details of implementation are present in the ReadMe section of indiv
 
 1. **`security-basic`** is a project that demonstrates a basic Spring Security implementation using default and custom user credentials. For more details refer [README.md](https://github.com/arijitdeb1/spring-security-6/blob/main/security-basic/README.md) within project.
 
-2. **`security-custom`** is a project that demonstrates a Spring Security implementation with custom access specifications/restrictions for multiple REST endpoints in the application. For more details refer README.md within project.
+2. **`security-custom`** is a project that demonstrates a Spring Security implementation with custom access specifications/restrictions for multiple REST endpoints in the application. For more details refer [README.md](https://github.com/arijitdeb1/spring-security-6/blob/main/security-custom/README.md) within project.
 
-3. **`security-password-encoding`** has an api to register a new User and encode the provided password using Hashing algorithm configured as part of the project. Same Hashing algo will be used while validating the password during Login. For more details refer README.md within project.
+3. **`security-password-encoding`** has an api to register a new User and encode the provided password using Hashing algorithm configured as part of the project. Same Hashing algo will be used while validating the password during Login. For more details refer [README.md](https://github.com/arijitdeb1/spring-security-6/blob/main/security-password-encoding/README.md) within project.
 
-4. **`security-configure-user`** showcases how to register multiple user credentials in application memory(not recommended for production usecase) and using same for authentication. For more details refer README.md within project.
+4. **`security-configure-user`** showcases how to register multiple user credentials in application memory(not recommended for production usecase) and using same for authentication. For more details refer [README.md](https://github.com/arijitdeb1/spring-security-6/blob/main/security-configure-user/README.md) within project.
 
-5. **`security-configure-DBuser`** is a project that provide api to register User and persist credentials within a H2 database. User retrieval has been demonstrated using both default as well as custom approaches.For more details refer README.md within project.
+5. **`security-configure-DBuser`** is a project that provide api to register User and persist credentials within a H2 database. User retrieval has been demonstrated using both default as well as custom approaches.For more details refer [README.md](https://github.com/arijitdeb1/spring-security-6/blob/main/security-configure-DBuser/README.md) within project.
 
-6. **`security-custom-authentication-authorization`** implements custom authentication logic  overriding default authentication of Spring Security. It also implements user authorization based on user roles, authorities etc. For more details refer README.md within project.
+6. **`security-custom-authentication-authorization`** implements custom authentication logic  overriding default authentication of Spring Security. It also implements user authorization based on user roles, authorities etc. For more details refer [README.md](https://github.com/arijitdeb1/spring-security-6/blob/main/security-custom-authentication-authorization/README.md) within project.
 
-7. **`security-CORS`** demonstrates a CORS use case using Spring Security and custom REST Client. For more details refer README.md within project.
+7. **`security-CORS`** demonstrates a CORS use case using Spring Security and custom REST Client. For more details refer [README.md](https://github.com/arijitdeb1/spring-security-6/blob/main/security-CORS/README.md) within project.
 
-8. **`security-CSRF`** demonstrates a CSRF use case using Spring Security. For more details refer README.md within project.
+8. **`security-CSRF`** demonstrates a CSRF use case using Spring Security. For more details refer [README.md](https://github.com/arijitdeb1/spring-security-6/blob/main/security-CSRF/README.md) within project.
