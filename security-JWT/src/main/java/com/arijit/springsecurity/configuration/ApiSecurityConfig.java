@@ -26,7 +26,7 @@ public class ApiSecurityConfig {
     public SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(csrfCustomizer -> csrfCustomizer.disable());
         http.headers(headersCustomizer -> headersCustomizer.frameOptions(frameOptionsCustomizer->frameOptionsCustomizer.disable()));
-        return http.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) //instruction to spring security to not create any session
+        return http.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) //instruction to spring security to not create any session as we'll be using oken
                 .cors( corsCustomizer ->  corsCustomizer.configurationSource(new CorsConfigurationSource() {
             @Override
             public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
@@ -40,7 +40,7 @@ public class ApiSecurityConfig {
                 return configuration;
                 }}))
                 .addFilterAfter(new JWTTokenGenerationFilter(), BasicAuthenticationFilter.class)//jwt token generation will start after BasicAuthenticationFilter
-                .addFilterBefore(new JWTTokenValidatorFilter(), BasicAuthenticationFilter.class)//jwt token validation will start before BasicAuthenticationFil
+                .addFilterBefore(new JWTTokenValidatorFilter(), BasicAuthenticationFilter.class)//jwt token validation will start before BasicAuthenticationFilter
                 .authorizeHttpRequests((requests) -> requests
                 .requestMatchers("/bird").hasAuthority("admin")
                 .requestMatchers("/animal").hasAnyAuthority("admin","user")
