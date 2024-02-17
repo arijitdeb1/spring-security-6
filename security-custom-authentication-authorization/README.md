@@ -37,11 +37,11 @@ It is the responsibility of the _`ProviderManager`_ which is an implementation o
     | hasAuthorit(), hasAnyAuthority(), access() | hasRole(), hasAnyRole(), access() |
     
     
-    |   |   |   |   |   |
-    |---|---|---|---|---|
-    |   |   |   |   |   |
-    |   |   |   |   |   |
-    |   |   |   |   |   |
+ |   |   |   |   |   |
+ |---|---|---|---|---|
+ |   |   |   |   |   |
+ |   |   |   |   |   |
+ |   |   |   |   |   |
     
     
     
