@@ -48,5 +48,6 @@ _* in-depth details of implementation are present in the ReadMe section of indiv
 
 5. **`security-configure-DBuser`** is a project that provide api to register User and persist credentials within a H2 database. User retrieval has been demonstrated using both default as well as custom approaches.For more details refer README.md within project.
 
-
 6. **`security-custom-authentication-authorization`** implements custom authentication logic  overriding default authentication of Spring Security. It also implements user authorization based on user roles, authorities etc. For more details refer README.md within project.
+
+7. **`security-CORS`** demonstrates a CORS use case using Spring Security and custom REST Client.
