@@ -1,6 +1,4 @@
-# spring-security-6
-#### _<ins>Basic understanding of CORS[Cross Origin Resource Sharing] and related issues</ins>_
-
+# Basic understanding of CORS [Cross Origin Resource Sharing] and related issues
  
 1. **CORS** is a protocol that enables scripts running on a browser client to interact with resources from a different origin. For example, if a UI app wishes to make ab API call running on a different domain, it would be blocked from doing so by default due to CORS. It is a specification fron W3C implemented by most browsers.
 
