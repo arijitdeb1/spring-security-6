@@ -3,10 +3,12 @@
 ## Disadvantages of session(JSESSIONID) based approach 
  * JSESSIONID doesn't contain any user data
  * JSESSIONID is stored as a cookie in user browser which can be misused.
- 
+
+  
 ## Sequence Flow for Token based authentication
 
   ![ScreenShot](/images/jwt-arch.PNG?raw=true)
+  
   
 ## Advantages of Token(JWT) based approach 
  * User credentials is shared only once during first attempt, all subsequent communications are validated using Token.
@@ -16,10 +18,12 @@
  * Multiple applications within same organization can be easily accessed with same Token without multiple Login attempt.
  * Token is Stateless to avoid any sticky session.
  
+ 
 ## Anatomy of JWT(JSON Web Token) 
   A JWT token(right in below image) consist of 3 parts - Header, Payload(User Details), Signature
   
    ![ScreenShot](/images/jwt-anatomy.PNG?raw=true)
+
 
 
 
@@ -55,6 +59,7 @@
  5. Register the above filters at  _`ApiSecurityConfig`_  after/before user authentication.
  6. Create an api - _`/custom_login`_ in _`LoginController`_ which will return the generated token and will be used to test the integration.
  7. Create a 256 bit key in the _`SecurityConstants`_ class to be used as a signature for JWT Token from [here](https://acte.ltd/utils/randomkeygen).
+ 
  
  
 ## Debugging end to end Flow to generate/validate JWT Tokens
