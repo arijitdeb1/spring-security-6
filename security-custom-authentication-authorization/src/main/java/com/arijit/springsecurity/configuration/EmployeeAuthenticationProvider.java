@@ -27,7 +27,7 @@ public class EmployeeAuthenticationProvider implements AuthenticationProvider {
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
-String username = authentication.getName();
+        String username = authentication.getName();
         String password = authentication.getCredentials().toString();
         //fetch user details
         List<Employee> employees = employeeRepository.findByEmail(username);
