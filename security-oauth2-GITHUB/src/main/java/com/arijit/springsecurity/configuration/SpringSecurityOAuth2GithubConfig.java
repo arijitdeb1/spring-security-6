@@ -2,6 +2,7 @@ package com.arijit.springsecurity.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.web.SecurityFilterChain;
 
@@ -10,7 +11,8 @@ public class SpringSecurityOAuth2GithubConfig {
 
     @Bean
     public SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
-        http.authorizeRequests().anyRequest().authenticated().and().oauth2Login();
+        //http.authorizeRequests().anyRequest().authenticated().and().oauth2Login();
+        http.authorizeHttpRequests(request -> request.anyRequest().authenticated()).oauth2Login(Customizer.withDefaults());
         return http.build();
     }
 
