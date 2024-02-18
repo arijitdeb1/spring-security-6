@@ -11,22 +11,23 @@
 8. Realm - a namespace in AuthZ server where you can create your users,roles etc. default realm - `master`
 9. Create Realm - `dev`
 10. To view all configurations, URLs for a realm Go To - Realm Settings >> OpenID Endpoint Configuration OR (http://localhost:8180/realms/dev/.well-known/openid-configuration)
-11. _`Setup Auth Server for API to API or Service to Service communication`_ - [Grant Type - Client Credentials]
+11. `**[Grant Type - Client Credentials]**` - **Setup Auth Server for API to API or Service to Service communication** - 
        1. One service(ex: POSTMAN) will need a Client ID/Secret to communicate to another service(ex: [Resource Server](https://github.com/arijitdeb1/spring-security-6/tree/main/security-oauth2-ResourceServer)) following OAuth2 specification.
        2. Client >> Create client [clientapi]
        3. Client Type - Open ID, Client ID - <any name> >> next
        4. Client Authentication - ON 
-       5. Authentication Flow - Dselect Standard Flow/Authorization Code Grant Type
-                                Dselect Direct Access Grants/Resource Owner Password Credentials Grant
-                                Select Service Account Roles/Client Credentials Grant
+       5. Authentication Flow - Uncheck Standard Flow/Authorization Code Grant Type
+                                Uncheck Direct Access Grants/Resource Owner Password Credentials Grant
+                                Check Service Account Roles/Client Credentials Grant
                                 
-       ![ScreenShot](/images/client-credentials-keycloak.PNG?raw=true)                         
-       6. Save and validate/copy the Client Secret under `Credentials` tab.      
-       7. Create New Roles in Keycloak - Realm Roles >> Create Role
-       8. Assign the above Roles to Client - Clients >> <Client ID> >> Service Account Roles >> Assign Role >> Select >> Adds
+       ![ScreenShot](/images/client-credentials-keycloak.PNG?raw=true) 
+                               
+       6. Save and validate/copy the Client Secret under `Credentials` tab.            
+       7. Create New Roles in Keycloak - Realm Roles >> Create Role.
+       8. Assign the above Roles to Client - Clients >> <Client ID> >> Service Account Roles >> Assign Role >> Select >> Adds.
        9. Configure and start [Resource Server](https://github.com/arijitdeb1/spring-security-6/tree/main/security-oauth2-ResourceServer) application.
        
- 12.  _`Setup Auth Server for User(login) to API or User(login) to Service communication`_ - [Grant Type - Authorization Code] 
+ 12.  `**[Grant Type - Authorization Code]**` - **Setup Auth Server for User(login) to API or User(login) to Service communication** -  
        1. _`Keycloak`_ will authenticate the logged in User to generate _`Authorization Code`_ and then _`Access Token`_ in subsequent request to _`Auth Server`_.
        2. Client >> Create client [clientuser]
        3. Client Type - Open ID, Client ID - <any name> >> next
