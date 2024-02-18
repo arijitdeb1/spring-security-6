@@ -22,7 +22,7 @@ _This service will act as `Resource Server` i.e. will require using valid Access
  8. Start the service.
  
  ## [Grant Type - `Client Credentials`] POSTMAN collection to get Access Token and request Resource Server apis
- **  **_[Keycloak setup]((https://github.com/arijitdeb1/spring-security-6/tree/main/security-oauth2-Keycloak-setup)) `#11` mentioned in above link should be in place _**
+ **  **_[Keycloak setup](https://github.com/arijitdeb1/spring-security-6/tree/main/security-oauth2-Keycloak-setup) `#11` mentioned in above link should be in place _**
   1. Import POSTMAN Collection - _`OAuth_Rest_Client.postman_collection`_ and update required details as per Keycloak configurations.
   
   **OR**
