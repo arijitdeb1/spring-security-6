@@ -42,7 +42,7 @@
     * _`scope`_ - level of access allowed to client.
     * _`grant_type`_ - value as `client_credentials` to indicate the type of GT being used.
     
-  ![ScreenShot](/images/client-credentials-GT.PNG?raw=true)
+  ![ScreenShot](/images/client-credentilas-GT.PNG?raw=true)
   
   **<ins>Token Validation by Resource Server</ins>**
   - _`ACCESS TOKEN`_ provided by AuthZ server need to be validated by the Resource server on every interaction.
