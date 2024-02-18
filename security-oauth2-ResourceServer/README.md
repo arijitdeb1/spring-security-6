@@ -26,7 +26,7 @@ _This service will act as `Resource Server` i.e. will require using valid Access
   1. Import POSTMAN Collection - _`OAuth_Rest_Client.postman_collection`_ and update required details as per Keycloak configurations.
   
   **OR**
-  ### [Grant Type - `Client Credentials`] POSTMAN setup to get Access Token and request Resource Server apis
+  ## [Grant Type - `Client Credentials`] POSTMAN setup to get Access Token and request Resource Server apis
   - Set Request - GET http://localhost:8080/plant
   - Set Authorization >> Grant Type - Client Credentials
                          Access Token Url - http://localhost:8180/realms/dev/protocol/openid-connect/token
