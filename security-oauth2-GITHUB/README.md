@@ -64,10 +64,3 @@
  5. Api in _`OAuthClientController`_ has the required `GET` api for Callback URL which will also receive the _`OAuth2AuthenticationToken`_ during redirect and display the contents of `home.html`.
   
 
-
-
-
-Client ID
-351ff678604fa59d2d70
-Client secrets
-39912bfa93bfdf2dfbb70769b1a9b290f48b9e83
