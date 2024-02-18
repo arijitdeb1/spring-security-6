@@ -58,7 +58,12 @@ _* in-depth details of implementation are present in the ReadMe section of indiv
 
 10. **`security-oauth2-GITHUB`** explains in brief the fundamentals of `OAuth 2.0` and `OpenID Connect` and also demonstrates a sample OAuth authentication using GITHUB as AuthZ server. For more details refer [README.md](https://github.com/arijitdeb1/spring-security-6/blob/main/security-oauth2-GITHUB/README.md) within project.
 
+11. **`security-oauth2-Keycloak-setup`** has step by step approach to download and setup Keycloak Authorization Server on local Windows System and implement OAuth authentication for 2 of the Grant Types - Client Credentials and Authorization Code . For more details refer [README.md](https://github.com/arijitdeb1/spring-security-6/blob/main/security-oauth2-Keycloak-setup/README.md) within project.
+
+12. **`security-oauth2-ResourceServer`** is an implementation of OAuth Resource Server to test Client Credentials Grant Type scenarios by integrating with Keycloak AuthZ server configured in previous step. For more details refer [README.md](https://github.com/arijitdeb1/spring-security-6/blob/main/security-oauth2-ResourceServer/README.md) within project.
+
 
 ## Useful Links
 
-   * Okta playground to test OAuth Grant Types - https://www.oauth.com/playground/
+   * Okta Playground to test OAuth Grant Types - https://www.oauth.com/playground/
+   * Keycloak Download - https://www.keycloak.org/downloads
