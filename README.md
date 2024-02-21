@@ -62,7 +62,7 @@ _* in-depth details of implementation are present in the ReadMe section of indiv
 
 12. **`security-oauth2-ResourceServer`** is an implementation of OAuth Resource Server to test Client Credentials Grant Type scenarios by integrating with Keycloak AuthZ server configured in previous step. For more details refer [README.md](https://github.com/arijitdeb1/spring-security-6/blob/main/security-oauth2-ResourceServer/README.md) within project.
 
-13. **`security-login-logout`* is a basic implementation of login and logout functionality using Spring Security and Thymeleaf.For more details refer [README.md](https://github.com/arijitdeb1/spring-security-6/blob/main/security-login-logout/README.md) within project.
+13. **`security-login-logout`** is a basic implementation of login and logout functionality using Spring Security and Thymeleaf.For more details refer [README.md](https://github.com/arijitdeb1/spring-security-6/blob/main/security-login-logout/README.md) within project.
 
 
 ## Useful Links
