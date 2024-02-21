@@ -16,7 +16,7 @@ public class ApiSecurityConfig {
     public SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(csrfCustomizer -> csrfCustomizer.disable());
         http.headers(headersCustomizer -> headersCustomizer.frameOptions(frameOptionsCustomizer->frameOptionsCustomizer.disable()));
-        return http.authorizeHttpRequests((requests) -> requests
+        return http.authorizeHttpRequests ((requests) -> requests
                 .requestMatchers("/h2-console/**").permitAll()
                 .requestMatchers("/car", "/bird").authenticated()
                 .requestMatchers("/animal", "/plant","/register").permitAll()

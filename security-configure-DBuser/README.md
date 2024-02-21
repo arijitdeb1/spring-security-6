@@ -50,7 +50,7 @@ Two separate implementations of loading User from H2 database has been done in t
     create table authorities (username varchar_ignorecase(50) not null,authority varchar_ignorecase(50) not null,constraint fk_authorities_users foreign key(username) references users(username));
     create unique index ix_auth_username on authorities (username,authority);
     
-   2. Insert some and user details and corresponding authorities.
+   2. Insert some user details and corresponding authorities/roles.
       
    3. Add below dependencies to pom.xml
    
