@@ -1,4 +1,4 @@
-# Single Sign ON using Spring Security and Keycloak
+# Login/Logout using Spring Security and Thymeleaf
 
 ## Project Setup and Execution
 1. Include following dependencies while generating the project in [start.spring.io](https://start.spring.io) -
