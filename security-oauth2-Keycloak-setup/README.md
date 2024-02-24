@@ -16,9 +16,11 @@
        2. Client >> Create client [clientapi]
        3. Client Type - Open ID, Client ID - <any name> >> next
        4. Client Authentication - ON 
-       5. Authentication Flow - Uncheck Standard Flow/Authorization Code Grant Type
-                                Uncheck Direct Access Grants/Resource Owner Password Credentials Grant
-                                Check Service Account Roles/Client Credentials Grant
+       5. Authentication Flow - 
+       
+             - Uncheck Standard Flow/Authorization Code Grant Type
+             - Uncheck Direct Access Grants/Resource Owner Password Credentials Grant
+             - Check Service Account Roles/Client Credentials Grant
                                 
        ![ScreenShot](/images/client-credentials-keycloak.PNG?raw=true) 
                                
