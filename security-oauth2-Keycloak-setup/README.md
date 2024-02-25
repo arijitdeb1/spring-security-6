@@ -4,6 +4,7 @@
 2. Extract downloaded zip and copy to Program files 
 3. [Keycloak page](https://www.keycloak.org/downloads) >> Getting Started >> Open JDK >> follow the instructions
 4. Go to Keycloak folder in any terminal and execute below command 
+
              bin\kc.bat start-dev --http-port 8180
 5. Access Keycloak at localhost:8180
 6. Create a admin user [admin/admin] 
