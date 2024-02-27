@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "7c88b871-d2f2-43ca-b21a-296b3ed5b9e0",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6548548"
+	},
+	"item": [
+		{
+			"name": "get Authorization Code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8180/realms/dev/protocol/openid-connect/auth?client_id=clientuser&response_type=code&scope=openid&redirect_uri=http://localhost:7080/sample",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8180",
+					"path": [
+						"realms",
+						"dev",
+						"protocol",
+						"openid-connect",
+						"auth"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "clientuser"
+						},
+						{
+							"key": "response_type",
+							"value": "code"
+						},
+						{
+							"key": "scope",
+							"value": "openid"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:7080/sample"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Access Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "clientuser",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "KCjVdsJgm1UJ8lm4Hpm4Yi0EFL2uiUnl",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "865ef856-1846-48cc-ad4b-f808426e4537.601543b3-7b75-40ae-bf34-1afe59ac181a.bff1da55-6205-4557-945e-d7f2b2bef72f",
+							"type": "text"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:7080/sample",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "openid",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8180/realms/dev/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8180",
+					"path": [
+						"realms",
+						"dev",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get plant",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ5Q3VfeHRUMGFWVXBfcHZSUW5maU1XUEl0WXkyWTgyZjZKSzVUazhhdVE4In0.eyJleHAiOjE3MDYzOTE5MzQsImlhdCI6MTcwNjM5MTYzNCwiYXV0aF90aW1lIjoxNzA2MzkxMTIyLCJqdGkiOiI3YjcyOTQzOC1lMGQ2LTQ2N2EtOTAyMS1jMTc2ZjRjZmNmODQiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODAvcmVhbG1zL2RldiIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJlOTgyZjgwYy1lMDMzLTQ2ZjctYTA5Ni03ZWRjZGY4MTk1M2IiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJjbGllbnR1c2VyIiwic2Vzc2lvbl9zdGF0ZSI6IjYwMTU0M2IzLTdiNzUtNDBhZS1iZjM0LTFhZmU1OWFjMTgxYSIsImFjciI6IjAiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo3MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLWRldiIsIm9mZmxpbmVfYWNjZXNzIiwiQURNSU4iLCJ1bWFfYXV0aG9yaXphdGlvbiIsIlVTRVIiXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIiwic2lkIjoiNjAxNTQzYjMtN2I3NS00MGFlLWJmMzQtMWFmZTU5YWMxODFhIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInByZWZlcnJlZF91c2VybmFtZSI6ImFyaWppdCIsImVtYWlsIjoiYXJpaml0ZGViMUBnbWFpbC5jb20ifQ.AyKkoYwVt2dtZFWfdqMzV1Ryg74K4pRlausUZkYzrccUX5YOwyizZQ3xg19KPmtSEqulBKNu2TUdYkBLfTB0c5kn2ZDm2C4EsAGOfoujVgV_4j2DT9D_3_s2DssBZ8-VZVTl4Eij5KMFFO8jhJ8uNLECn33tx7FraRScKlOCqDMPpsz5YdKdrgwZnz3mnF4R7HRr6_kIODldfNls7tF_nO1iZ8W_8GlFOVRv9fatWEFdrz6yQ5HnAn2HMUGoWne93TCqMXoP3bNCnx1nEYSNEJv-x-KE73ZvXR4xICpQS_gbdP-u6QJETdRk7GQ7Od_lOlx2fs8A_8gwMax0zanb7A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/plant",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"plant"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
