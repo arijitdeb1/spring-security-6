@@ -34,7 +34,7 @@
     
   ![ScreenShot](/images/authz-code-GT.PNG?raw=true)
 
-  [demo in OAuth 2.0 playground](https://www.oauth.com/playground/)
+  [Click here to observe a demo in OAuth 2.0 playground](https://www.oauth.com/playground/)
   
   **<ins>Grant Type - Client Credentials</ins>** (_no user involved, communication between 2 secured micro services_ )
   - In step #1, below details we passed when making a request to AuthZ server.
