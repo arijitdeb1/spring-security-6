@@ -20,13 +20,20 @@ Follow below setups which provides a sample hands on to understand Authorization
   ## POSTMAN setup to get Access Token based on Authorization code from above
    
    4. POST http://localhost:8180/realms/dev/protocol/openid-connect/token
-   5. Body - x-www-form-urlencoded
+   5. Body - **x-www-form-urlencoded**
+   
       client_id = 
+      
       client_secret = 
+      
       grant_type = authorization_code
+      
       code = <above highlighted code> 
+      
       redirect_uri =
+      
       scope = openid
+      
    6. Copy the Access Token from response
    7. If the request fails with "invalid_grant" error signifies that the Authorization Code from `#3` has expired and need to re-initiate the URI in `#1`. The expiry for Authorization Code is very limited and hence need to quickly copied and configured at `#5`.
    
