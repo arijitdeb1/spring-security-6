@@ -37,7 +37,7 @@ Follow below setups which provides a sample hands on to understand Authorization
    6. Copy the Access Token from response
    7. If the request fails with "invalid_grant" error signifies that the Authorization Code from `#3` has expired and need to re-initiate the URI in `#1`. The expiry for Authorization Code is very limited and hence need to quickly copied and configured at `#5`.
    
-  ## POSTMAN setup to call REST apis in Resource Server
+  ## POSTMAN setup to call REST apis in [Resource Server](https://github.com/arijitdeb1/spring-security-6/tree/main/security-oauth2-ResourceServer)
    8. set header Authorization = Bearer <Access Token>
    9. Validate outcomes based on Role configured in _`ApiSecurityConfig`_ and Keycloak.
       
