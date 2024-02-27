@@ -40,5 +40,6 @@
        6. Set redirect URIs - [_http://localhost:7080/sample is a dummy URI representing a UI application where user will land after successful authentication_]
        ![ScreenShot](/images/authz-code-redirect.PNG?raw=true) 
        7. Save and validate/copy the Client Secret under `Credentials` tab.
-       8. Add some user who will trigger the authentication - Users >> Add User
-       9. Add some Role to the above users - Users >> Role mapping >> Assign Role
+       8. Add some user who will trigger the authentication - Users >> Add User.
+       9. Add some Role to the above users - Users >> Role mapping >> Assign Role.
+       10. Follow the steps in [security-oauth2-GT-Authorization-Code] to run a sample demonstration for Authorization Code flow based on above configuration.
