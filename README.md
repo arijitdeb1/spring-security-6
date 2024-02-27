@@ -66,6 +66,8 @@ _* in-depth details of implementation are present in the ReadMe section of indiv
 
 14. **`security-login-logout`** is a basic implementation of login and logout functionality using Spring Security and Thymeleaf.For more details refer [README.md](https://github.com/arijitdeb1/spring-security-6/blob/main/security-login-logout/README.md) within project.
 
+15. **`security-sso`** is a Single Sign On implementation containing two services/applications and using Spring Security and Keycloak AuthZ server. For more details refer [README.md](https://github.com/arijitdeb1/spring-security-6/blob/main/security-sso/README.md) within project.
+
 
 ## Useful Links
 
