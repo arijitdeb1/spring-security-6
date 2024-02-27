@@ -39,6 +39,8 @@ Follow below setups which provides a sample hands on to understand Authorization
    
   ## POSTMAN setup to call REST apis in [Resource Server](https://github.com/arijitdeb1/spring-security-6/tree/main/security-oauth2-ResourceServer)
   _with above setup in place you can even access the REST APIs in [Resource Server]_(https://github.com/arijitdeb1/spring-security-6/tree/main/security-oauth2-ResourceServer)
-   8. set header Authorization = Bearer <Access Token>
+   
+   8. set header Authorization = Bearer <Access Token>.
+   
    9. Validate outcomes based on Role configured in _`ApiSecurityConfig`_ and Keycloak.
       
