@@ -91,10 +91,10 @@ _configuration needed for validating JWT token against Keycloak server_:
 # Internal Spring Security Flow to Authenticate and Authorize the users by the applications.
 ![ScreenShot](/images/sso-login.PNG?raw=true)
 
-After successful Login, if user tries to access other applications registered with `Keycloak` under same `Realm`.
+After successful Login following above flow, if user tries to access other applications registered with `Keycloak` under same `Realm`.
 1. `Keycloak` AuthZ server is generate an `Authorization Code` after validating the user session.
 2. `Authorization Code` will validated and exchanged by application(example: `player-app`) to generate an `Access Token`.
-3. AuthN/AuthZ process flow remains same as shown in above sequence diagram.
+3.  AuthN/AuthZ process flow remains same as shown in above sequence diagram.
 
 
 
