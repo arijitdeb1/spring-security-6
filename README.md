@@ -3,7 +3,7 @@
 
 A detailed step-by-step hands-on approach to learn and understand various concepts of Authentication and Authorization using Spring Security 6 and related features. 
 
-![ScreenShot](/images/main-page-P.PNG?raw=true)
+![ScreenShot](/images/main-page-P.png?raw=true)
 
 
 ## Software Prerequisites
