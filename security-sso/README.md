@@ -73,7 +73,6 @@ _configuration needed for validating JWT token against Keycloak server_:
 4. Endpoint details are available in the corresponding controller class.  
 
 # Execution steps to validate SSO capabilities.
-
 1. Start `player-app` on port 8080 and `coach-app` on port 8081.
 2. Users with `COACH` privilege are authorized to access both `coach-app` and `player-app`.
 3. Users with `PLAYER` privilege can only access `player-app`. 
@@ -87,7 +86,17 @@ _configuration needed for validating JWT token against Keycloak server_:
 11. Click `LogOut` and user will be gracefully logged out from both the application and session will become inactive and removed.
 12. User with `PLAYER` privilege can login to `player-app` at port 8080 but cannot access the `Manage Player` link.
 13. Only a `COACH` user can login to `player-app` and access `Manage Player` link.
-13. Any attempt to access `coach-app` by any user with `PLAYER` privilege will be resulted in `Access Denied`
+13. Any attempt to access `coach-app` by any user with `PLAYER` privilege will be resulted in `Access Denied`.
+
+# Internal Spring Security Flow to Authenticate and Authorize the users by the applications.
+![ScreenShot](/images/sso-login.PNG?raw=true)
+
+After successful Login, if user tries to access other applications registered with `Keycloak` under same `Realm`.
+1. `Keycloak` AuthZ server is generate an `Authorization Code` after validating the user session.
+2. `Authorization Code` will validated and exchanged by application(example: `player-app`) to generate an `Access Token`.
+3. AuthN/AuthZ process flow remains same as shown in above sequence diagram.
+
+
 
    
 
