@@ -3,13 +3,14 @@
 
 A detailed step-by-step hands-on approach to learn and understand various concepts of Authentication and Authorization using Spring Security 6 and related features. 
 
-
+![ScreenShot](/images/main-page.JPG?raw=true)
 
 
 ## Software Prerequisites
 
 * Java 17
 * SpringBoot 3.2.2
+* Keycloak
 
 ## Architecture
 
