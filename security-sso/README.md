@@ -29,6 +29,7 @@ Below are the features of this implementation -
    ![ScreenShot](/images/Auth-code-sso.PNG?raw=true)
    
    Go to `Client Scopes` and set `microprofile-jwt` as `Default` which so that KeyCloak passes all the roles for the authenticating user to the token.
+   
    ![ScreenShot](/images/microprofile-jwt.PNG?raw=true)
    
    Go to `Realm roles` and create two roles - `PLAYER` and `COACH`
