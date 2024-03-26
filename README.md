@@ -69,6 +69,7 @@ _* in-depth details of implementation are present in the ReadMe section of indiv
 
 15. **`security-sso`** is a Single Sign On implementation containing two services/applications and using Spring Security and Keycloak AuthZ server. For more details refer [README.md](https://github.com/arijitdeb1/spring-security-6/blob/main/security-sso/README.md) within project.
 
+16. **`oauth-demo-Spotify`**  demonstrates OAuth/OIDC on Spotify platform. For more details refer [README.md](https://github.com/arijitdeb1/spring-security-6/blob/main/oauth-demo-Spotify/README.md) within project.
 
 ## Useful Links
 
