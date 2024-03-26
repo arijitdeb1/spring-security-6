@@ -69,7 +69,12 @@ We'll be authorizing the user using **`Authorization Code Flow`**.The authorizat
 5. Access Token from above can be used to access the resources on Spotify based on the allowed scopes.
    One sample request below to search for any track on Spotify. 
    
-## Search for a Track on Spotify
+## Accessing Spotify Resources
+Include the **`Access Token`** from above to **`Authorization`** header as a **`Bearer`** token for every request to Spotify Web Apis.
+
+Refer [here](https://developer.spotify.com/documentation/web-api) for additional details and to access all the resources exposed by Spotify Developer platform.
+
+Import the _`collection`_ to POSTMAN to play around some apis related to playlist on Spotify.
 
 
        
