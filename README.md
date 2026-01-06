@@ -71,6 +71,8 @@ _* in-depth details of implementation are present in the ReadMe section of indiv
 
 16. **`oauth-demo-Spotify`**  demonstrates OAuth/OIDC on Spotify platform. For more details refer [README.md](https://github.com/arijitdeb1/spring-security-6/blob/main/oauth-demo-Spotify/README.md) within project.
 
+17. For PKCE refer [README.md](https://github.com/arijitdeb1/spring-security-6/blob/main/PKCE/ReadMe.md)
+
 ## Useful Links
 
    * Okta Playground to test OAuth Grant Types - https://www.oauth.com/playground/
